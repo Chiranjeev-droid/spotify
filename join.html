@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="body-3">
+    <div data-collapse="none" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navigation w-nav">
+        <div class="nav_wrap">
+            <a href="/" class="logo_img w-nav-brand"><img src="logo.svg" width="108" alt="" class="logo-image" /></a>
+            <div class="menu">
+                <nav role="navigation" class="nav_items w-nav-menu">
+                    <a href="about.html" class="navigation-item w-nav-link">Discover</a>
+                    <a href="join.html" class="navigation-item w-nav-link">Join</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="join-header">
+        <div class="join-heading">
+            <h1 class="heading join-heading">Join the<span style="color: #F20082;display: inline-block;font-size: 125px;font-weight: 700;font-family: 'Poppins',sans-serif;"> Fun</span>.</h1>
+        </div>
+        <div class="join_form_wrapper">
+            <div id="form_container" class="form_container">
+                <div id="formblock" class="form_block w-form">
+                    <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-cf1">
+                        <label for="name" class="field_label">Name:</label><input type="text" class="text_field w-input"
+                            maxlength="256" name="name" data-name="Name" placeholder="" id="name" required="true" />
+
+                        <label for="Email-3" class="field_label">Email:</label>
+                        <input type="email" class="text_field w-input" maxlength="256" name="email" data-name="Email"
+                            placeholder="" id="email" required="true" />
+                        <label for="Password" class="field_label">Password:</label>
+
+                        <input type="password" class="text_field w-input" name="password" data-name="Name"
+                            placeholder="" value="" id="pass1" required="true" />
+                        <input type="submit" value="Join Now" id="register" onclick='validatepassword()'
+                            data-wait="Please wait..." class="submitbtn w-button" />
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer foot wf-section">
+        <div class="footer-container">
+            <div class="foot-links">
+                <a href="about.html" target="_blank" class="footlink w-inline-block">
+                    <div class="paragraph-tiny-2">ABOUT US</div>
+                </a><a href="join.html" target="_blank" class="footlink w-inline-block">
+                    <div class="paragraph-tiny-2">Contact</div>
+                </a>
+            </div>
+            <div class="social-link">
+                <div class="link-div">
+                    <div class="social-icon">
+                        <img src="twitter.svg" loading="lazy" alt="" />
+                    </div>
+                    <a href="/" target="_blank" class="social-name">Facebook</a>
+                </div>
+                <div class="link-div">
+                    <div class="social-icon">
+                        <img src="fb.svg"
+                            loading="lazy" alt="" />
+                    </div>
+                    <a href="/" target="_blank" class="social-name">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function validatepassword() {
+        var password = document.getElementById("pass1").value;
+        var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        if (re.test(password) == false) {
+            ;
+            alert("Password must be a minimum of 8 characters including number, Upper, Lower And one special character");
+        }
+        else {
+            alert("Form Submitted Successfully");
+
+
+        }
+    }
+
+
+</script>
+
+</html>
